@@ -3,9 +3,10 @@ let app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var Sequelize = require('sequelize');
-var connnection = new Sequelize('project2', 'projectwo', 'jurassicpark', {
-    dialect: 'postgres'
-});
+let db = require('./models');
+// var connnection = new Sequelize('project2', 'projectwo', 'jurassicpark', {
+//     dialect: 'postgres'
+// });
 
 
 
@@ -29,11 +30,3 @@ http.listen(9000, () =>{
 
 
 
-//questoin i have: why use migrate(slide 15) when you can just add in the code in the app.js file?
-
-// var Article = connection.define('article', {
-//     title: Sequelize.STRING,
-//     body: Sequelize.TEXT
-// });
-
-// connection.sync();
