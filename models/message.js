@@ -3,13 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Message = sequelize.define('Message', {
     text: DataTypes.TEXT
   }, {});
-  Message.associate = function(models) {
-    User.belongsTo(models.Channel, {
-      foreignKey: 'channelId'
-    });
-    Team.belongsTo(models.User, {
-      foreignKey: 'userId'
-    });
-  };
+  Message.belongsTo(models.Project, { 
+    through: "MessageProject"
+  }) 
   return Message;
 };

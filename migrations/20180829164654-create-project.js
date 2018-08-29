@@ -6,8 +6,24 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          models: 'User',
+          key: 'id'
+        },
+        references: {
+          models: 'Message',
+          key: 'id'
+        },
       },
+      // references: {
+      //   models: 'User',
+      //   key: 'id'
+      // },
+      // references: {
+      //   models: 'Message',
+      //   key: 'id'
+      // },
       projectName: {
         type: Sequelize.STRING,
         allowNull: false

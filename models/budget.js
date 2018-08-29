@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     expenseLog: DataTypes.STRING
   }, {});
 
-  
+
   Budget.associate = function(models) {
     Budget.belongsTo(models.Project, {
-      foreignKey: 'projectNameId'
-    })
+      through: 'ProjectBudget'
+    });
   };
   return Budget;
 };

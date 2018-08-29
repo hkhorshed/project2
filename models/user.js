@@ -9,9 +9,8 @@ module.exports = (sequelize, DataTypes) => {
 
   
   User.associate = function(models) {
-    User.belongsToMany(models.Team , {
-      through: 'member',
-      foreignKey: 'userId'
+    User.belongsToMany(models.Project , { 
+      through:"UserProject"
     })
   };
 

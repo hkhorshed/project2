@@ -6,8 +6,16 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          models: 'Project',
+          key: 'id'
+        },
       },
+      // references: {
+      //   models: 'Project',
+      //   key: 'id'
+      // },
       projectName: {
         type: Sequelize.STRING,
         allowNull: false
