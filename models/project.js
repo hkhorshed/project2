@@ -8,8 +8,16 @@ module.exports = (sequelize, DataTypes) => {
     deadLine: DataTypes.DATE,
     endDate: DataTypes.DATE
   }, {});
+
+
   Project.associate = function(models) {
-    // associations can be defined here
+    Project.belongsToMany(models.User, {
+      through: 'member',
+      foreignKey: 'userId'
+    });
+    Project.belongsTo(models.user, {
+      foreignKey: 'owner'
+    });
   };
   return Project;
 };

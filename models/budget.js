@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
     budget: DataTypes.INTEGER,
     expenseLog: DataTypes.STRING
   }, {});
+
+  
   Budget.associate = function(models) {
-    // associations can be defined here
+    Budget.belongsTo(models.Project, {
+      foreignKey: 'projectNameId'
+    })
   };
   return Budget;
 };
