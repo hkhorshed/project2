@@ -6,10 +6,10 @@ var io = require('socket.io')(http);
 
 
 app.set('view engine', 'ejs');
-app.set('appData', data);
 
 app.use(express.static('public'));
 
+app.use(require('./routes/tasks'));
 
 
 
