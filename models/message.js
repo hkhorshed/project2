@@ -1,10 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Message = sequelize.define('Message', {
+  const message = sequelize.define('message', {
     text: DataTypes.TEXT
   }, {});
-  Message.belongsTo(models.Project, { 
-    through: "MessageProject"
-  }) 
-  return Message;
+  
+  
+  message.associate = function(models) {
+    message.belongsTo(models.project, { 
+      through: "MessageProject"
+    }) 
+  };
+  return message;
 };

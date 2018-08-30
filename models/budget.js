@@ -1,18 +1,18 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Budget = sequelize.define('Budget', {
+  const budget = sequelize.define('budget', {
     projectName: DataTypes.STRING,
     startDate: DataTypes.DATE,
     endDate: DataTypes.DATE,
     budget: DataTypes.INTEGER,
     expenseLog: DataTypes.STRING
   }, {});
-
-
-  Budget.associate = function(models) {
-    Budget.belongsTo(models.Project, {
+  
+  
+  budget.associate = function(models) {
+    budget.belongsTo(models.project, {
       through: 'ProjectBudget'
     });
   };
-  return Budget;
+  return budget;
 };

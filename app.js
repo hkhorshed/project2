@@ -4,9 +4,6 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var Sequelize = require('sequelize');
 let db = require('./models');
-// var connnection = new Sequelize('project2', 'projectwo', 'jurassicpark', {
-//     dialect: 'postgres'
-// });
 
 
 
