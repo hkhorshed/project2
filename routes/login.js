@@ -48,9 +48,9 @@ router.post('/login',
 );
 
 
-passport.use(new LocalStrategy((username, password, done) => {
+passport.use(new LocalStrategy((userName, password, done) => {
     console.log('Im in passport');
-    db.user.findAll({where: {username: username}}).then ((results) => {
+    db.user.findAll({where: {userName: userName}}).then ((results) => {
        
         if(results != null) {
             const data = results[0];
@@ -58,7 +58,7 @@ passport.use(new LocalStrategy((username, password, done) => {
                 if(res) {
                     console.log("Hello world")
                     console.log(data)
-                    done(null, { id: data.id, username: data.username})
+                    done(null, { id: data.id, userName: data.userName})
                 } else {
                     console.log("Returned nothing")
                     done(null, false)
@@ -88,7 +88,7 @@ passport.serializeUser((user, done) => {
 })
 
 passport.deserializeUser((id, done) => {
-    db.users.findById(parseInt(id, 10)).then( (data) => {
+    db.user.findById(parseInt(id, 10)).then( (data) => {
         
        
         done(null, data)
