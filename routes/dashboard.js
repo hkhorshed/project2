@@ -8,8 +8,10 @@ router.get('/dashboard',function(req,res){
       return
     }
   
-    res.send("You are logged in!")
-  })
+    res.render('dashboard', {
+      pageTitle: 'Dashboard'
+    })
+  });
 
 
 
