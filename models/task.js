@@ -6,8 +6,11 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT
   }, {});
   task.associate = function(models) {
-    task.hasMany(models.project, {
+    task.hasOne(models.project, {
       foreignKey: 'project_id'
+    }),
+    task.hasMany(models.user, {
+      foreignKey: 'user_id'
     })
   };
   return task;
