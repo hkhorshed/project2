@@ -1,1 +1,7 @@
 Executing (default): SELECT "id", "name", "userName", "email", "password", "phoneNum", "project_id", "createdAt", "updatedAt", "user_id" FROM "users" AS "user" WHERE "user"."username" = 'motohunter';
+
+init
+sequelize model:generate --name user --attributes firstName:string,lastName:string,email:string,cellNum:int, 
+sequelize db:migrate
+
+
