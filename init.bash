@@ -17,4 +17,4 @@
 # sequelize model:generate --name task --attributes project_id:integer,mainTask:string,description:text
 
 #sub class table
-sequelize model:generate --name subTask --attributes task:string,description:text,user_id:integer,project_id:integer,task_id:integer
+# sequelize model:generate --name subTask --attributes task:string,description:text,user_id:integer,project_id:integer,task_id:integer
