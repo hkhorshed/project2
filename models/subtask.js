@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const subTask = sequelize.define('subTask', {
-    task: DataTypes.STRING,
+    subTaskIndex: DataTypes.STRING,
     description: DataTypes.TEXT,
     user_id: DataTypes.INTEGER,
     project_id: DataTypes.INTEGER,

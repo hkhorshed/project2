@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      task: {
+      subTaskIndex: {
         type: Sequelize.STRING
       },
       description: {
