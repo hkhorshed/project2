@@ -2,6 +2,7 @@
 //     $(this).closest('ul').hide();
 // });
 
+
 // var parent = 0;
 var counter = 1;
 $(document).ready(function(){
@@ -29,11 +30,17 @@ $('.addOn').click(function(){
     let labelB = document.createElement('label');
     let inputB = document.createElement('input');
     let Scrap = document.createElement('button');
-    let Submit = document.createElement('button');
+    let Submit = document.createElement('input');
     inputS.setAttribute('type', 'text');
+    inputS.setAttribute('name', 'f1name');
     inputO.setAttribute('type', 'text');
+    inputO.setAttribute('name', 'f1owner');
     inputD.setAttribute('type', 'text');
+    inputD.setAttribute('name', 'f1description');
     inputB.setAttribute('type', 'integer');
+    inputB.setAttribute('name', 'f1budget');
+    formBox.setAttribute('action', './../tasks');
+    formBox.setAttribute('method', 'post');
     //putting the form together
     labelS.textContent = "Subtask:"
     formBox.appendChild(labelS);
@@ -55,10 +62,11 @@ $('.addOn').click(function(){
     Scrap.textContent="scrap";
     formBox.appendChild(Scrap);
     Submit.setAttribute('class', 'submit');
-    Submit.textContent="submit";
+    Submit.setAttribute('type', 'submit');
+    Submit.setAttribute('value', 'submit');
     formBox.appendChild(Submit);
     div.append(formBox);
-    $(this).closest('ul').append(div);
+    $(this).closest('ul').append(div); 
 
     //scrap button 
     $('.scrap').click(function(event){
@@ -69,6 +77,7 @@ $('.addOn').click(function(){
     //submit button
     $('.submit').click(function(event){
         event.preventDefault();
+        
         //the peices of the new subtask
         let newUL = document.createElement('ul');
         let divUnordered = document.createElement('div');
@@ -124,7 +133,6 @@ $('.addOn').click(function(){
         newUL.setAttribute('class', 'Parent_is1');
         divUnordered.setAttribute('class', 'unordered1');
 
-
     });
 
     $('body').on('click', 'div.removeBut' + counter, function(){
@@ -161,11 +169,17 @@ $('.addOn').click(function(){
         let labelB = document.createElement('label');
         let inputB = document.createElement('input');
         let Scrap = document.createElement('button');
-        let Submit = document.createElement('button');
+        let Submit = document.createElement('input');
         inputS.setAttribute('type', 'text');
+        inputS.setAttribute('name', 'f2name');
         inputO.setAttribute('type', 'text');
+        inputO.setAttribute('name', 'f2owner');
         inputD.setAttribute('type', 'text');
+        inputD.setAttribute('name', 'f2description');
         inputB.setAttribute('type', 'integer');
+        inputB.setAttribute('name', 'f2budget');
+        formBox.setAttribute('action', '/tasks');
+        formBox.setAttribute('method', 'POST');
         //putting the form together
         labelS.textContent = "Subtask:"
         formBox.appendChild(labelS);
@@ -187,7 +201,8 @@ $('.addOn').click(function(){
         Scrap.textContent="scrap";
         formBox.appendChild(Scrap);
         Submit.setAttribute('class', 'submit');
-        Submit.textContent="submit";
+        Submit.setAttribute('type', 'submit');
+        Submit.setAttribute('value', 'submit');
         formBox.appendChild(Submit);
         div.append(formBox);
         $(this).closest('ul').append(div);
