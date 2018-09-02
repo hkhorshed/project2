@@ -1,0 +1,68 @@
+.loginback{
+    background-image: url("/public/photos/liquidMerc.jpg");
+    max-width: 100%;
+    min-height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.85;
+}
+
+.body1{
+    background: linear-gradient(217deg, grey, lightgrey 70.71%),
+            linear-gradient(127deg, grey, lightgrey 70.71%),
+            linear-gradient(336deg, lightgrey, black 70.71%);
+}
+
+#title1 {
+    color: rgb(9, 8, 73);
+    font-display: bold;
+    font-size: 7vw;
+    padding-top: 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.signUpButton {
+    background-color: darkslategrey;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.signUpButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.loginback{
+    background-image: url("/photos/liquidMerc.jpg");
+}
+
+.createNew{
+    background-color: #31562F;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.createNew:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  

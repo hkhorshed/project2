@@ -8,12 +8,67 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
   </head>
-  <body>
-        <% include partials/template/navBar.ejs %>
+  <body class="body1">
+        
+
+      <div class="container py-5">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1 class="text-center mb-5" id="title1">MERKURI</h1>
+                  <div class="row">
+                      <div class="col-md-6 mx-auto">
+                          <div class="card border-secondary">
+                              <div class="card-header">
+                                  <h3 class="mb-0 my-2">Sign Up</h3>
+                              </div>
+                              <div class="card-body">
+                                  <form class="form" action="/register" method="POST" role="form" autocomplete="off">
+                                      <div class="form-group">
+                                          <label for="inputName">Name:</label>
+                                          <input type="text" name="name" class="form-control" id="inputName" placeholder="full name">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputUserName">Username:</label>
+                                          <input type="text" name="userName" class="form-control" id="inputuserName" placeholder="username">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputEmail3">Email:</label>
+                                          <input type="text" name="email" class="form-control" id="inputEmail3" placeholder="email" required="">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputphoneNum">Cell Phone Number:</label>
+                                          <input type="text" name="phoneNum" class="form-control" id="inputName" placeholder="number">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputPassword3">Password:</label>
+                                          <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="password" title="At least 6 characters with letters and numbers" required="">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="inputVerify3">Verify:</label>
+                                          <input type="password" class="form-control" id="inputVerify3" placeholder="password (again)" required="">
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="submit" value="Submit" class="signUpButton float-right">Register</input>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--/row-->
+      
+              </div>
+              <!--/col-->
+          </div>
+          <!--/row-->
+      </div>
+      <!--/container-->
+      <% include partials/template/footer.ejs %>
 
 
-        <div class="registerForm"></div>
+        <!-- <div class="registerForm">
             
             <form action="/register" method="POST">
                     Name: <input type="text" name="name" />
@@ -24,7 +79,7 @@
                 <input type="submit" class="btn btn-primary" value="submit"/>
             </form>
     
-        </div>
+        </div> -->
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
