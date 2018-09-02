@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 // app.set('appData', data);
 
 app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public/'));
 
 
 // app.use(require('./routes/tasks'));

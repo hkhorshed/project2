@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     phoneNum: DataTypes.STRING,
     project_id: DataTypes.INTEGER
   }, {});
+  
   user.associate = function(models) {
     user.hasMany(models.project, {
       foreignKey: 'project_id'

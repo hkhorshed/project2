@@ -123,39 +123,3 @@ ul{
 
 /* navbar design template */
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-  background-color: #0B40AF;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #52A8E3;
-    color: white; 
-    text-decoration: none;
-}
-
-.active {
-    background-color: #719943;
-}
-
-.active:hover {
-  background-color: #8AAB6C;
-  color: white;
-  text-decoration: none;
-}

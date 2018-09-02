@@ -22,16 +22,60 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: black;
+      }
+      
+      li {
+          float: left;
+      }
+      
+      li a {
+        background-color: dodgerblue;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover:not(.active) {
+          background-color: lightgrey;
+          color: dodgerblue; 
+          text-decoration: none;
+      }
+      
+      .active {
+          background-color: green;
+      }
+      
+      .active:hover {
+        background-color: lightgrey;
+        color: green;
+        text-decoration: none;
+      }
+      body {
+        background-color: rgb(156, 197, 238);
+      }
+
+    </style>
+
   </head>
 
   <body>
-
+  
       <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li style="float:right"><a class="active" href="#signout">Sign Out</a></li>
         </ul>
+  
   
       
     <!-- Optional JavaScript -->
