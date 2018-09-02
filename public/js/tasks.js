@@ -108,6 +108,7 @@ $('.addOn').click(function(){
         buttons.setAttribute('class', 'buttons buttons'+counter);
         //the content of the new subtask
         pName.textContent= $(this).siblings('#subtask').val();
+        var NNN=pName.textContent
         pOwner.textContent=$(this).siblings('#owner').val();
         bDown.textContent="V";
         descr.textContent=$(this).siblings('#description').val();
@@ -132,6 +133,11 @@ $('.addOn').click(function(){
         counter +=1;
         newUL.setAttribute('class', 'Parent_is1');
         divUnordered.setAttribute('class', 'unordered1');
+        $.post("/tasks",
+        {
+            name: NNN,
+            
+        })
 
     });
 
@@ -269,6 +275,7 @@ $('.addOn').click(function(){
             counter +=1;
             newUL.setAttribute('class', 'Parent_is1');
             divUnordered.setAttribute('class', 'unordered2');
+
 
 
         });

@@ -25,6 +25,7 @@ app.use(express.static('public'));
 
 app.use(require('./routes/tasks'));
 app.use(require('./routes/chat'));
+app.use(require('./routes/create'));
 
 app.use(require('./routes/login'));
 app.use(require('./routes/register'));

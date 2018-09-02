@@ -5,20 +5,20 @@ var bodyParser = require('body-parser');
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/tasks', function(req, res){
+router.get('/create', function(req, res){
     
-    res.render('tasks', {
+    res.render('create', {
     })
 })
-router.post('/tasks', (req,res) => {
+router.post('/create', (req,res) => {
 
    
     
 
-    db.project.create({projectName: req.body.name})
+    db.project.create({projectName: req.body.Nname, teamLead: req.body.Nowner, startDate: req.body.NSdate, endDate: req.body.NEdate,})
     .then(() => {
         // success;
-        res.redirect('/login');
+        res.redirect('/tasks');
     })
     .catch(error => {
         // error;
