@@ -141,6 +141,10 @@ $('.addOn').click(function(){
         {
             mainTask1: NN,
             description1: DD,
+            budget1: BB,
+            owner: OO,
+            name: NN,
+            
         })
         
     });
