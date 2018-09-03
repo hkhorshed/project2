@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "projectwo",
+    "password": "jurassicpark",
+    "database": "project2",
+    "host": "project2.cmi40etclhd2.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "projectwo",
+    "password": "jurassicpark",
+    "database": "project2",
+    "host": "project2.cmi40etclhd2.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "projectwo",
+    "password": "jurassicpark",
+    "database": "project2",
+    "host": "project2.cmi40etclhd2.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  }
+}
