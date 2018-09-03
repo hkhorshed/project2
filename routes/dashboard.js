@@ -3,15 +3,15 @@ let router = express.Router();
 
 router.get('/dashboard',function(req,res){
   
-    if(!req.isAuthenticated()) {
-        res.redirect('/login');
-      return
-    }
-  
-    res.send("You are logged in!")
+    res.render('dashboard', {
+        pageTitle: 'Projects'
+    })
   })
 
 
 
   
 module.exports = router;
+
+
+  
