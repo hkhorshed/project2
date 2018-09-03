@@ -31,6 +31,11 @@ app.use(require('./routes/login'));
 app.use(require('./routes/register'));
 app.use(require('./routes/dashboard'));
 app.use(require('./routes/logout'));
+// app.use(require('./routes/project'));
+// app.use(require('./routes/task'));
+// app.use(require('./routes/subtask'));
+// app.use(require('./routes/budget'));
+
 
 http.listen(9000, () =>{
     console.log('listening port 9000');

@@ -73,7 +73,7 @@ $('.addOn').click(function(){
         event.preventDefault();
         $(this).closest('div').remove();
     });
-
+    let jesus = counter;
     //submit button
     $('.submit').click(function(event){
         event.preventDefault();
@@ -133,6 +133,7 @@ $('.addOn').click(function(){
         $(this).closest('ul').append(newUL);
         //remover form
         $(this).closest('div').remove();
+        let jesus = counter;
         counter +=1;
         newUL.setAttribute('class', 'Parent_is1');
         divUnordered.setAttribute('class', 'unordered1');
@@ -141,7 +142,7 @@ $('.addOn').click(function(){
             mainTask1: NN,
             description1: DD,
         })
-
+        
     });
 
     $('body').on('click', 'div.removeBut' + counter, function(){
@@ -263,7 +264,7 @@ $('.addOn').click(function(){
             bDown.textContent="V";
             descr.textContent=$(this).siblings('#description').val();
             let DDD= descr.textContent;
-            let BBB = $(this).siblings('#budget');
+            let BBB = $(this).siblings('#budget').val();
             add.textContent="+ Add Sub-class";
             remove.textContent="X";
             //putting all the pieces together and plugging them in
@@ -284,13 +285,17 @@ $('.addOn').click(function(){
             counter +=1;
             newUL.setAttribute('class', 'Parent_is1');
             divUnordered.setAttribute('class', 'unordered2');
-            console.log($(this).closest('ul').children('.pName').textContent)
+            console.log(jesus);
             $.post("/tasks",
             {
                 // taskId: $(this).closest'ul'.
-                mainTask: NNN,
                 description: DDD,
-                subTaskIndex: counter
+                subTaskIndex: counter-1,
+                budget: BBB,
+                task_id: jesus,
+                name:NNN,
+                owner: OOO
+
             })
 
         });

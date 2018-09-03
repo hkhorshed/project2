@@ -12,16 +12,14 @@ router.get('/create', function(req, res){
 })
 router.post('/create', (req,res) => {
 
-   
-    
-
-    db.project.create({projectName: req.body.Nname, teamLead: req.body.Nowner, startDate: req.body.NSdate, endDate: req.body.NEdate,})
+    db.project.create({projectName: req.body.Nname, teamLead: req.body.Nowner, startDate: req.body.NSdate, endDate: req.body.NEdate, budget: req.body.Nbudget, description: req.body.Ndescription})
     .then(() => {
         // success;
         res.redirect('/tasks');
     })
     .catch(error => {
         // error;
+        alert(error)
     });
   
     //save to database

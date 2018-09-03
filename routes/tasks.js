@@ -14,9 +14,9 @@ router.post('/tasks', (req,res) => {
 
    
     
-    db.subTask.create({mainTask: req.body.mainTask1, description: req.body.description1})
+    // db.task.create({mainTask: req.body.mainTask1, description: req.body.description1})
 
-    db.task.create({mainTask: req.body.mainTask, description: req.body.description})
+    db.subTask.create({name: req.body.name, description: req.body.description, subTaskIndex: req.body.subTaskIndex, budget: req.body.budget, task_id: req.body.task_id, budget: req.body.budget, owner: req.body.owner})
 
     
     
