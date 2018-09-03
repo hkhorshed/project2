@@ -5,7 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     teamLead: DataTypes.STRING,
     startDate: DataTypes.DATE,
     endDate: DataTypes.DATE,
-    user_id: DataTypes.INTEGER
+    user_id: DataTypes.INTEGER,
+    budget: DataTypes.INTEGER,
+    description: DataTypes.TEXT
   }, {});
   project.associate = function(models) {
     project.hasMany(models.user, {
