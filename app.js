@@ -7,7 +7,6 @@ let db = require('./models');
 
 
 app.set('view engine', 'ejs');
-// app.set('appData', data);
 
 app.use(express.static('public'));
 
@@ -19,10 +18,11 @@ app.use(require('./routes/logout'));
 // app.use(require('./routes/project'));
 // app.use(require('./routes/task'));
 // app.use(require('./routes/subtask'));
-// app.use(require('./routes/budget'));
+app.use(require('./routes/budget'));
 
 
-http.listen(9000, () =>{
+
+http.listen(9000, () => {
     console.log('listening port 9000');
 });
 

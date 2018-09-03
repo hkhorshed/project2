@@ -38,7 +38,7 @@ router.use(passport.session());
 
 router.get('/login', (req, res) => {
     res.render('login', {
-        pageTitle: 'login'
+        pageTitle: 'Log In'
     })
 });
 
