@@ -94,7 +94,7 @@ $('.addOn').click(function(){
         let buttons = document.createElement('div');
         //the classes of the new subtask
         divUnordered.setAttribute('class', 'unordered' + counter);
-        pName.setAttribute('class', 'pName' + counter);
+        pName.setAttribute('class', 'pName pName' + counter);
         pOwner.setAttribute('class', 'owner' + counter);
         bDown.setAttribute('class', 'down' + counter);
         bDown.setAttribute('id', 'down' + counter);
@@ -108,10 +108,13 @@ $('.addOn').click(function(){
         buttons.setAttribute('class', 'buttons buttons'+counter);
         //the content of the new subtask
         pName.textContent= $(this).siblings('#subtask').val();
-        var NNN=pName.textContent
+        let NN=pName.textContent;
         pOwner.textContent=$(this).siblings('#owner').val();
+        let OO= pOwner.textContent;
         bDown.textContent="V";
         descr.textContent=$(this).siblings('#description').val();
+        let DD= descr.textContent;
+        let BB = $(this).siblings('#budget');
         add.textContent="+ Add Sub-class";
         remove.textContent="X";
         //putting all the pieces together and plugging them in
@@ -135,8 +138,8 @@ $('.addOn').click(function(){
         divUnordered.setAttribute('class', 'unordered1');
         $.post("/tasks",
         {
-            name: NNN,
-            
+            mainTask1: NN,
+            description1: DD,
         })
 
     });
@@ -209,6 +212,8 @@ $('.addOn').click(function(){
         Submit.setAttribute('class', 'submit');
         Submit.setAttribute('type', 'submit');
         Submit.setAttribute('value', 'submit');
+        Submit.textContent='submit';
+        console.log(Submit.textContent);
         formBox.appendChild(Submit);
         div.append(formBox);
         $(this).closest('ul').append(div);
@@ -238,7 +243,7 @@ $('.addOn').click(function(){
             let buttons = document.createElement('div');
             //the classes of the new subtask
             divUnordered.setAttribute('class', 'unordered' + counter);
-            pName.setAttribute('class', 'pName' + counter);
+            pName.setAttribute('class', 'pName pName' + counter);
             pOwner.setAttribute('class', 'owner' + counter);
             bDown.setAttribute('class', 'down' + counter);
             bDown.setAttribute('id', 'down' + counter);
@@ -252,9 +257,13 @@ $('.addOn').click(function(){
             buttons.setAttribute('class', 'buttons buttons'+counter);
             //the content of the new subtask
             pName.textContent= $(this).siblings('#subtask').val();
+            let NNN=pName.textContent;
             pOwner.textContent=$(this).siblings('#owner').val();
+            let OOO= pOwner.textContent;
             bDown.textContent="V";
             descr.textContent=$(this).siblings('#description').val();
+            let DDD= descr.textContent;
+            let BBB = $(this).siblings('#budget');
             add.textContent="+ Add Sub-class";
             remove.textContent="X";
             //putting all the pieces together and plugging them in
@@ -275,8 +284,14 @@ $('.addOn').click(function(){
             counter +=1;
             newUL.setAttribute('class', 'Parent_is1');
             divUnordered.setAttribute('class', 'unordered2');
-
-
+            console.log($(this).closest('ul').children('.pName').textContent)
+            $.post("/tasks",
+            {
+                // taskId: $(this).closest'ul'.
+                mainTask: NNN,
+                description: DDD,
+                subTaskIndex: counter
+            })
 
         });
 

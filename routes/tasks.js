@@ -14,17 +14,10 @@ router.post('/tasks', (req,res) => {
 
    
     
+    db.subTask.create({mainTask: req.body.mainTask1, description: req.body.description1})
 
-    db.project.create({projectName: req.body.name})
-    .then(() => {
-        // success;
-        res.redirect('/login');
-    })
-    .catch(error => {
-        // error;
-    });
-  
-    //save to database
+    db.task.create({mainTask: req.body.mainTask, description: req.body.description})
+
     
     
   });
