@@ -3,16 +3,16 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
-      'subTasks',
-      'name',
+      'projects',
+      'project_id',
       {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       }
     );
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.removeColumn(
-              'subTasks', 'name');
+              'projects', 'project_id');
   }
 };
