@@ -22,11 +22,11 @@ There are no reqiured installations to view this project. However if you wish to
 
 ## Example of Different Codes
 <p>
-  <img src="/public/photos/appjsExampleone.png" alt="app.js Example">
-  <img src="/photos/javascriptLogIn.png" alt="Log In JS file">
-  <img src="/photos/modelMigrationExample.png" alt="Migration Model">
-  <img src="/photos/sqlExample.png" alt="SQL tables using Postgres">
-  <img src="/photos/sqlOneTable.png" alt="User Log in page data with hashed passwords">
+  <img src="Desktop/MERKURI/public/photos/appjsExampleone.png" alt="appjs Example">
+  <img src="Desktop/MERKURI/photos/javascriptLogIn.png" alt="Log In JS file">
+  <img src="Desktop/MERKURI/photos/modelMigrationExample.png" alt="Migration Model">
+  <img src="Desktop/MERKURI/photos/sqlExample.png" alt="SQL tables using Postgres">
+  <img src="Desktop/MERKURI/photos/sqlOneTable.png" alt="User Log in page data with hashed passwords">
 </p>
 
 ## Example of the Live Server
