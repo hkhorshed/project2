@@ -21,15 +21,18 @@ There are no reqiured installations to view this project. However if you wish to
 - Ejs
 
 ## Example of Different Codes
-<img src="/public/photos/appjsExampleone.png" alt="app.js Example">
-![Alt text](/public/photos/appjsExampleone.png?raw=true "Optional Title")
-<img src="/photos/javascriptLogIn.png" alt="Log In JS file">
-<img src="/photos/modelMigrationExample.png" alt="Migration Model">
-<img src="/photos/sqlExample.png" alt="SQL tables using Postgres">
-<img src="/photos/sqlOneTable.png" alt="User Log in page data with hashed passwords">
+<p>
+  <img src="/public/photos/appjsExampleone.png" alt="app.js Example">
+  <img src="/photos/javascriptLogIn.png" alt="Log In JS file">
+  <img src="/photos/modelMigrationExample.png" alt="Migration Model">
+  <img src="/photos/sqlExample.png" alt="SQL tables using Postgres">
+  <img src="/photos/sqlOneTable.png" alt="User Log in page data with hashed passwords">
+</p>
 
 ## Example of the Live Server
-<img src="/photos/createAccountServerPage.png" alt="Making and Account with MERKURI">
+<p>
+  <img src="/photos/createAccountServerPage.png" alt="Making and Account with MERKURI">
+</p>
 
 
 ## Deployment
